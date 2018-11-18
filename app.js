@@ -35,7 +35,8 @@ http.createServer(function (req, res) {
             
         });
     }
-    else if(q.name = "Sebastian" && q.password == "mario"){
+    else if(q.name = "Sebastian" && q.password == "mario")
+    {
         fs.readFile('sebastian.html', function(err, welcomeData){
             res.writeHead(200, {'Content-Type': 'text/html'});
             res.write(welcomeData);
