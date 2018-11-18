@@ -43,6 +43,14 @@ http.createServer(function (req, res) {
             
         });
     }
+    else if(q.name = "Austin" && q.password == "haha"){
+        fs.readFile('austin.html', function(err, welcomeData){
+            res.writeHead(200, {'Content-Type': 'text/html'});
+            res.write(welcomeData);
+            res.end();
+            
+        });
+    }
     else
     {
         fs.readFile('index.html', function(err, data) {
